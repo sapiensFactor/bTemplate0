@@ -1,0 +1,21 @@
+instruction to install the theme::
+
+====Preperation ===================
+step 1: login to your blogger account
+step 2: click on "Theme" on your Blogger Dashboard
+step 3: follow the dropdown menu beside "Customize" option and select "Edit HTML"
+==========Process===================
+step 1: copy the contents of *.xml
+step 2: select and delete all the contents of "Edit HTML" section.
+step 3: paste the contents of *.xml file.
+step 4: click on the "Save" (icon/button)
+===========Post Processing==========
+step 1: login to your blogger account
+step 2: click on "Layout" on your Blogger Dashboard
+step 3: click on "edit" and then "remove" for all widgets except
+	a) blog-posts
+	b) popular-posts
+	c) blog-owner
+	d) blog-archive
+	e) contact form
+	f) let's get connected (HTML/JavaScript) 
