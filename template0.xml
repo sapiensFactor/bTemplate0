@@ -575,6 +575,7 @@ footer {
 
 .blog-posts.hfeed {
 	display: flex;
+    flex-wrap: wrap;
 }
 
 .date-posts {
@@ -936,6 +937,10 @@ footer {
 		margin: 10px 5px;
 		flex-direction: column;
 	}
+    .blog-posts.hfeed {
+      	width: 795px;
+      	margin-left: -7px;
+    }
 	.post-outer {
 		margin-right: 15px;
 	}
@@ -959,6 +964,9 @@ footer {
 		flex-direction: row;
 		margin-left: 40px;
 	}
+    .widget.Profile {
+     	 
+    }
 	.profile-datablock {
 		align-items: flex-start;
 		margin-left: 15px;
@@ -1126,19 +1134,19 @@ footer {
 		
       <b:include data='top' name='status-message'/>
 
-      <b:loop values='data:posts' var='post'>
-        <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
+      <b:loop values='data:posts' var='post'>        	
+       <!-- <b:if cond='data:post.isDateStart and not data:post.isFirstPost'>
           &lt;/div&gt;&lt;/div&gt;
         </b:if>
         <b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-outer&quot;&gt;
-        </b:if>
+        </b:if> -->
         <b:if cond='data:post.dateHeader'>
           <h2 class='date-header'><span><data:post.dateHeader/></span></h2>
         </b:if>
-        <b:if cond='data:post.isDateStart'>
+        <!--<b:if cond='data:post.isDateStart'>
           &lt;div class=&quot;date-posts&quot;&gt;
-        </b:if>
+        </b:if> -->
         <div class='post-outer'>
           <b:include data='post' name='post'/>
           <b:include cond='data:blog.pageType in {&quot;static_page&quot;,&quot;item&quot;}' data='post' name='comment_picker'/>
@@ -1873,9 +1881,8 @@ footer {
   </div>
 </b:includable>
 </b:widget>
-</b:section>                        
-              </div>
-              <div class='popular-posts' id='pposts'>
+</b:section>
+                 <div class='popular-posts' id='pposts'>
               	<h1>popular posts</h1>
                 <b:section id='popular-post-section'>
                   <b:widget id='PopularPosts1' locked='true' title='Popular Posts' type='PopularPosts' version='1'>
@@ -1932,9 +1939,9 @@ footer {
                 </b:section>
               
               </div>
-          </div>
-      </div>
-      <div class='extras'>
+          
+             </div>
+              <div class='extras'>
       <b:section class='extra' id='sidebar'>
         <b:widget id='Profile1' locked='false' title='Blog Owner' type='Profile' version='1'>
           <b:widget-settings>
@@ -2131,7 +2138,9 @@ footer {
         </b:widget>
       </b:section>
     </div>  
-    </div>
+             </div>
+      </div>
+    </div>    
     <script>
       const lists = document.querySelectorAll(&quot;.pages ul a&quot;);
       for (const list of lists) {
@@ -4499,6 +4508,4 @@ for (i = 0; i &lt; dropdown.length; i++) {
       
   </script>
 </body>
-
-
 </html>
